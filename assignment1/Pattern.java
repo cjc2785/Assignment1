@@ -6,18 +6,14 @@ class Pattern {
 
 
     public static void main(String args[]) {
-     
         
-        Pattern x = new Pattern();
-        
-        x.getPyramid(5, Orientation.Bottom);
 
         String result = "1)";
         result += "\n" + Pattern.getTriangle(4, Orientation.Top);
-        result += "\n" + x.repeat(".", 9);
+        result += "\n" + Pattern.repeat(".", 9);
         result += "\n";
         result += "\n" + "2)";
-        result += "\n" + x.repeat(".", 10);
+        result += "\n" + Pattern.repeat(".", 10);
         result += "\n" + Pattern.getTriangle(4, Orientation.Bottom);
         result += "\n";
 
@@ -29,7 +25,7 @@ class Pattern {
         result += "\n" + Pattern.repeat(".", 12);
         result += "\n" + Pattern.getPyramid(4, Orientation.Bottom);
 
-             System.out.println(result);
+        System.out.println(result);
     }
 
 
