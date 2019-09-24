@@ -1,6 +1,6 @@
-package com.ss.demo.test;
+package assignment1;
 
-class HelloWorld {
+class Pattern {
 
     enum Orientation {Top, Bottom}
 
@@ -8,32 +8,32 @@ class HelloWorld {
     public static void main(String args[]) {
      
         
-        HelloWorld x = new HelloWorld();
+        Pattern x = new Pattern();
         
         x.getPyramid(5, Orientation.Bottom);
 
         String result = "1)";
-        result += "\n" + x.getTriangle(4, Orientation.Top);
+        result += "\n" + Pattern.getTriangle(4, Orientation.Top);
         result += "\n" + x.repeat(".", 9);
         result += "\n";
         result += "\n" + "2)";
         result += "\n" + x.repeat(".", 10);
-        result += "\n" + x.getTriangle(4, Orientation.Bottom);
+        result += "\n" + Pattern.getTriangle(4, Orientation.Bottom);
         result += "\n";
 
         result += "\n" + "3)";
-        result += "\n" + x.getPyramid(4, Orientation.Top);
-        result += "\n" + x.repeat(".", 11);
+        result += "\n" + Pattern.getPyramid(4, Orientation.Top);
+        result += "\n" + Pattern.repeat(".", 11);
         result += "\n";
         result += "\n" + "4)";
-        result += "\n" + x.repeat(".", 12);
-        result += "\n" + x.getPyramid(4, Orientation.Bottom);
+        result += "\n" + Pattern.repeat(".", 12);
+        result += "\n" + Pattern.getPyramid(4, Orientation.Bottom);
 
              System.out.println(result);
     }
 
 
-    private String repeat(String text, int times) {
+    private static String repeat(String text, int times) {
         String result = "";
         for(int i = 0; i < times; ++i) {
             result += text;
@@ -42,7 +42,7 @@ class HelloWorld {
     }
 
 
-    private String getPyramid(int height, Orientation orientation) {
+    private static String getPyramid(int height, Orientation orientation) {
 
         String result = "";
         int offset = 1;
@@ -76,7 +76,7 @@ class HelloWorld {
         return result;
     }
 
-    private String getTriangle(int base, Orientation orientation) {
+    private static String getTriangle(int base, Orientation orientation) {
 
         String result = "";
 
